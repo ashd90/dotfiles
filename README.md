@@ -1,2 +1,2 @@
 # dotfiles
-Contains the config files 
+Contains the config files, Conky & Plank Themes
