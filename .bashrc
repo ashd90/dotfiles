@@ -46,6 +46,13 @@ alias sprdd='sudo pacman -Rdd'
 alias spqo='sudo pacman -Qo'
 alias spsii='sudo pacman -Sii'
 
+#Sytem Services
+alias enable='sudo systemctl enable --now'
+alias disable='sudo systemctl disable'
+alias start='sudo systemctl start'
+alias stop='sudo systemctl stop'
+alias status='sudo systemctl status'
+
 # show the list of packages that need this package - depends mpv as example
 function_depends()  {
     search=$(echo "$1")
@@ -422,6 +429,7 @@ alias pamac-unlock="sudo rm /var/tmp/pamac/dbs/db.lock"
 
 #moving your personal files and folders from /personal to ~
 alias personal='cp -Rf /personal/* ~'
+
 
 #create a file called .bashrc-personal and put all your personal aliases
 #in there. They will not be overwritten by skel.
