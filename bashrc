@@ -1,6 +1,6 @@
 ### EXPORT ###
-export EDITOR='nano'
-export VISUAL='nano'
+export EDITOR='vim'
+export VISUAL='vim'
 export HISTCONTROL=ignoreboth:erasedups
 export PAGER='most'
 
