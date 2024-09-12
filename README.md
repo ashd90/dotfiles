@@ -1,2 +1,2 @@
 # dotfiles
-Contains the config files, Conky & Plank Themes
+🌐🌐🌐 Contains the config files, Conky,USB WIFI Driver & Plank Themes.🌐🌐🌐
