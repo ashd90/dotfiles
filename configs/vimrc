@@ -1,0 +1,6 @@
+if v:version < 802
+    packadd! onedark
+endif
+syntax enable
+colorscheme onedark
+
