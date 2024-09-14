@@ -160,3 +160,6 @@ instance = "Alacritty"
 x = 6
 y = 6
 
+[window.dimensions]
+columns = 100
+lines = 30
