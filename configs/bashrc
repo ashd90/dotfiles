@@ -289,8 +289,8 @@ alias nrefind="sudo $EDITOR /boot/refind_linux.conf"
 alias nalacritty="nano /home/$USER/.config/alacritty/alacritty.toml"
 
 #removing packages
-alias rvariety="arcolinux-remove-variety"
-alias rkmix="arcolinux-remove-kmix"
+# alias rvariety="arcolinux-remove-variety"
+# alias rkmix="arcolinux-remove-kmix"
 alias rconky="arcolinux-remove-conky"
 
 #reading logs with bat
