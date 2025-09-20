@@ -1,0 +1,1 @@
+/home/ashish/.local/share/mybash/.bashrc
