@@ -1,4 +1,4 @@
 #DotFiles
 
 
-This repo contains the configuration files
+This repository contains the configuration files & personal scripts
