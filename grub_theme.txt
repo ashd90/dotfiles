@@ -1,0 +1,2 @@
+git clone --depth 1 https://gitlab.com/VandalByte/darkmatter-grub-theme.git && cd darkmatter-grub-theme
+sudo python3 darkmatter-theme.py --install

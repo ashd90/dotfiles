@@ -1,4 +1,2 @@
-#DotFiles
-
-
-This repository contains the configuration files & personal scripts
+# dotfiles
+🌐🌐🌐 Contains the config files, Conky,USB WIFI Driver & Plank Themes.🌐🌐🌐
