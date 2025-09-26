@@ -83,9 +83,6 @@ Feel free to fork and adapt these dotfiles. If you want to use them as your own:
 
 Pull requests are welcome! If you find improvements or new configurations, feel free to open an issue or PR.
 
-## License
-
-These dotfiles are released under the MIT License. See [LICENSE](LICENSE) for details.
 
 ---
 
