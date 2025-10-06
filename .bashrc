@@ -56,6 +56,15 @@ alias start='sudo systemctl start'
 alias stop='sudo systemctl stop'
 alias status='sudo systemctl status'
 
+#Docker
+
+alias drm ='docker rm'
+alias drmi ='docker rmi'
+alias dcr ='docker container run'
+alias dr ='docker run'
+alias dsp ='docker system prune'
+alias db ='docker build'
+
 # show the list of packages that need this package - depends mpv as example
 function_depends()  {
     search=$(echo "$1")
