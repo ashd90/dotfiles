@@ -65,6 +65,15 @@ alias dr ='docker run'
 alias dsp ='docker system prune'
 alias db ='docker build'
 
+#git
+
+alias gst ='git status'
+alias ga ='git add'
+alias gc ='git commit -m'
+alias gp ='git push'
+alias gpl ='git pull'
+
+
 # show the list of packages that need this package - depends mpv as example
 function_depends()  {
     search=$(echo "$1")
