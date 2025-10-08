@@ -64,6 +64,8 @@ alias dcr ='docker container run'
 alias dr ='docker run'
 alias dsp ='docker system prune'
 alias db ='docker build'
+alias ds ='docker container start'
+alias dst ='docker container stop'
 
 #git
 
