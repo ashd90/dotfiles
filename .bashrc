@@ -2,8 +2,8 @@
 # ~/.bashrc
 #
 ### EXPORT ###
-export EDITOR='vim'
-export VISUAL='vim'
+export EDITOR='nvim'
+export VISUAL='nvim'
 export HISTCONTROL=ignoreboth:erasedups
 export PAGER='most'
 
@@ -114,11 +114,6 @@ alias setlocales="sudo localectl set-x11-keymap be && sudo localectl set-locale 
 alias unlock="sudo rm /var/lib/pacman/db.lck"
 alias rmpacmanlock="sudo rm /var/lib/pacman/db.lck"
 
-#arcolinux logout unlock
-#alias rmlogoutlock="sudo rm /tmp/arcologout.lock"
-
-#which graphical card is working
-#alias whichvga="/usr/local/bin/arcolinux-which-vga"
 
 #free
 alias free="free -mt"
@@ -148,8 +143,8 @@ alias psa="ps auxf"
 alias psgrep="ps aux | grep -v grep | grep -i -e VSZ -e"
 
 #grub update
-alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
-alias grub-update="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+# alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+# alias grub-update="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 #grub issue 08/2022
 #alias install-grub-efi="sudo grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=ArcoLinux"
 
@@ -160,7 +155,7 @@ alias update-fc='sudo fc-cache -fv'
 #skel alias has been replaced with a script at /usr/local/bin/skel
 
 #backup contents of /etc/skel to hidden backup folder in home/user
-alias bupskel='cp -Rf /etc/skel ~/.skel-backup-$(date +%Y.%m.%d-%H.%M.%S)'
+# alias bupskel='cp -Rf /etc/skel ~/.skel-backup-$(date +%Y.%m.%d-%H.%M.%S)'
 
 #copy shell configs
 alias cb='cp /etc/skel/.bashrc ~/.bashrc && exec bash'
@@ -310,7 +305,7 @@ alias nalacritty="nano /home/$USER/.config/alacritty/alacritty.toml"
 #alias rconky="arcolinux-remove-conky"
 
 #reading logs with bat
-alias lcalamares="bat /var/log/Calamares.log"
+# alias lcalamares="bat /var/log/Calamares.log"
 alias lpacman="bat /var/log/pacman.log"
 alias lxorg="bat /var/log/Xorg.0.log"
 alias lxorgo="bat /var/log/Xorg.0.log.old"
@@ -467,17 +462,16 @@ eval eval -- "$(/usr/local/bin/starship init bash --print-full-init)"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/ashish/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/ashish/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/ashish/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/ashish/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-export PATH="/home/ashish/anaconda3/bin:$PATH"
-
+# __conda_setup="$('/home/ashish/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+# if [ $? -eq 0 ]; then
+#     eval "$__conda_setup"
+# else
+#     if [ -f "/home/ashish/anaconda3/etc/profile.d/conda.sh" ]; then
+#         . "/home/ashish/anaconda3/etc/profile.d/conda.sh"
+#     else
+#         export PATH="/home/ashish/anaconda3/bin:$PATH"
+#     fi
+# fi
+# unset __conda_setup
+# # <<< conda initialize <<<
+# export PATH="/home/ashish/anaconda3/bin:$PATH"
