@@ -1,6 +1,6 @@
-general.import = [
-  "/usr/lib/node_modules/alacritty-themes/themes/One-Dark.toml"
-]
+#general.import = [
+#  "/usr/lib/node_modules/alacritty-themes/themes/One-Dark.toml"
+#]
 
 [colors]
 draw_bold_text_with_bright_colors = true
