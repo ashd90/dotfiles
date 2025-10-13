@@ -66,6 +66,7 @@ alias dsp ='docker system prune'
 alias db ='docker build'
 alias ds ='docker container start'
 alias dst ='docker container stop'
+alias dn ='docker network'
 
 #git
 
