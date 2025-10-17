@@ -12,7 +12,6 @@ This repo contains my personal configuration files (dotfiles) used to set up and
 - [Usage](#usage)
 - [Customization](#customization)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Overview
 
