@@ -55,7 +55,7 @@ alias disable='sudo systemctl disable'
 alias start='sudo systemctl start'
 alias stop='sudo systemctl stop'
 alias status='sudo systemctl status'
-
+alias reload='sudo systemctl restart'
 #Docker
 
 alias drm ='docker rm'
