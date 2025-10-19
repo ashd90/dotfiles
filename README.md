@@ -84,4 +84,4 @@ Feel free to fork and adapt these dotfiles. If you want to use them as your own:
 
 ---
 
-Happy customizing! 😄
+
