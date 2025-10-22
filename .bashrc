@@ -58,23 +58,23 @@ alias status='sudo systemctl status'
 alias reload='sudo systemctl restart'
 #Docker
 
-alias drm ='docker rm'
-alias drmi ='docker rmi'
-alias dcr ='docker container run'
-alias dr ='docker run'
-alias dsp ='docker system prune'
-alias db ='docker build'
-alias ds ='docker container start'
-alias dst ='docker container stop'
-alias dn ='docker network'
+alias drm='docker rm'
+alias drmi='docker rmi'
+alias dcr='docker container run'
+alias dr='docker run'
+alias dsp='docker system prune'
+alias db='docker build'
+alias ds='docker container start'
+alias dst='docker container stop'
+alias dn='docker network'
 
 #git
 
-alias gst ='git status'
-alias ga ='git add'
-alias gc ='git commit -m'
-alias gp ='git push'
-alias gpl ='git pull'
+alias gst='git status'
+alias ga='git add'
+alias gc='git commit -m'
+alias gp='git push'
+alias gpl='git pull'
 
 
 # show the list of packages that need this package - depends mpv as example
@@ -241,8 +241,8 @@ alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
 alias riplong="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -3000 | nl"
 
 #iso and version used to install ArcoLinux
-alias iso="cat /etc/dev-rel | awk -F '=' '/ISO/ {print $2}'"
-alias isoo="cat /etc/dev-rel"
+#alias iso="cat /etc/dev-rel | awk -F '=' '/ISO/ {print $2}'"
+#alias isoo="cat /etc/dev-rel"
 
 #Cleanup orphaned packages
 alias cleanup='sudo pacman -Rns $(pacman -Qtdq)'
