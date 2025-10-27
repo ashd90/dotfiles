@@ -4,3 +4,6 @@ jenkins
 terraform
 bleachbit
 gnome-disk-utility
+bluez
+bluez-utils
+blueman
