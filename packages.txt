@@ -8,3 +8,4 @@ bluez
 bluez-utils
 blueman
 qbittorrent
+aws-cli
