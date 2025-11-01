@@ -9,3 +9,4 @@ bluez-utils
 blueman
 qbittorrent
 aws-cli
+btop
