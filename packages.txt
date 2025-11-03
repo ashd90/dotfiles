@@ -10,3 +10,4 @@ blueman
 qbittorrent
 aws-cli
 btop
+kubectl
