@@ -68,6 +68,11 @@ alias ds='docker container start'
 alias dst='docker container stop'
 alias dn='docker network'
 
+#Ufw
+
+alias allow='sudo ufw allow http'
+alias ufwstatus='sudo ufw status numbered'
+
 #git
 
 alias gst='git status'
