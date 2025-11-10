@@ -1,1 +1,0 @@
-conky -c /home/ashish/.config/conky/AUR-Acros.conkyrc & sleep 1s
