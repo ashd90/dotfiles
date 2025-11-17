@@ -70,8 +70,10 @@ alias dn='docker network'
 
 #Ufw
 
-alias allow='sudo ufw allow http'
+alias ufwallow='sudo ufw allow'
 alias ufwstatus='sudo ufw status numbered'
+alias ufwdef='sudo ufw default allow'
+alias ufwdeny='sudo ufw default deny'
 
 #git
 
