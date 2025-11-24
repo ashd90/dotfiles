@@ -42,9 +42,8 @@ alias l.="ls -A | egrep '^\.'"
 alias listdir="ls -d */ > list"
 
 #pacman
-alias sps='sudo pacman -S'
-alias spr='sudo pacman -R'
-alias sprs='sudo pacman -Rs'
+alias install='sudo pacman -S'
+alias remove='sudo pacman -Rns'
 alias sprdd='sudo pacman -Rdd'
 alias spqo='sudo pacman -Qo'
 alias spsii='sudo pacman -Sii'
