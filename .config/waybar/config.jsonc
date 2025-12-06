@@ -19,6 +19,7 @@
   ],
 
   "modules-right": [
+    "temperature",
     "cpu",
     "memory",
     "disk",
@@ -28,28 +29,13 @@
   ],
 
   // -------- ULTRA CLEAN WORKSPACES (NUMBERS ONLY) --------
-  "hyprland/workspaces": {
-    "format": "{id}",
-    "on-click": "activate",
-    "format-icons": {
-      "default": "",
-      "1": "1",
-      "2": "2",
-      "3": "3",
-      "4": "4",
-      "5": "5",
-      "6": "6",
-      "7": "7",
-      "8": "8",
-      "9": "9",
-      "10": "0",
-      "active": "󱓻",
-    "sort-by-number": true
-    },
-    "persistent-workspaces": {
-      "*": 9
-    }
-  },
+  
+"hyprland/workspaces": {
+  "format": "{id}",
+  "on-click": "activate",
+  "sort-by-number": true,
+},
+
 "custom/update": {
     "format": "",
     "exec": "omarchy-update-available",
@@ -73,40 +59,46 @@
 
   // -------- CPU (click → btop/htop in Alacritty) --------
   "cpu": {
-    "interval": 2,
-    "format": "  {usage}%",
+    "format": " {usage}%",
+    "interval": 1,
+    "warning": 60,
+    "critical": 85,
+    "tooltip": true,
     "on-click": "alacritty -e btop || alacritty -e htop"
   },
 
   // -------- MEMORY (click → btop in Alacritty) --------
   "memory": {
     "interval": 3,
-    "format": "  {percentage}%",
+    "format": "  {percentage}%",
+    "warning": 70,
+    "critical": 90,
+    "tooltip": true,
     "on-click": "alacritty -e btop"
   },
+"temperature": {
+  "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
+  "format": " {temperatureC}°C",
+  "warning-threshold": 65,
+  "critical-threshold": 80,
+  "tooltip": true
+},
 
   // -------- STORAGE + TOOLTIP + ANIMATED WARNINGS --------
 // -------- STORAGE (Used / Total shown in bar + Tooltip + Animated Warnings) --------
 "disk": {
-  "interval": 30,
+  "format": "  {percentage_used}% ({used}/{total})",
   "path": "/",
-
-  // ✅ Shows: icon + used/total + percentage
-  "format": "󰋊 {used}/{total}({percentage_used}%)",
-
-  // ✅ Detailed hover tooltip
-  "tooltip-format": "  Disk Usage\nUsed: {used} GB\nFree: {free} GB\nTotal: {total} GB",
-
-  // ✅ Animated warning levels
-  "warning": 75,
-  "critical": 90
+  "warning": 70,
+  "critical": 90,
+  "tooltip": true
 },
 
   "network": {
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
     "format": "{icon}",
-    "format-wifi": "{icon}",
-    "format-ethernet": "󰀂",
+    "format-wifi": "  {signalStrength}%  {bandwidthUpBits}  {bandwidthDownBits}",
+    "format-ethernet": "󰈀  {bandwidthUpBits} {bandwidthDownBits}",
     "format-disconnected": "󰤮",
     "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
     "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
