@@ -1,0 +1,177 @@
+/* ================= GLOBAL ================= */
+
+* {
+  border: none;
+  border-radius: 10px;
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-size: 10px;
+  min-height: 0;
+}
+
+window#waybar {
+  background: linear-gradient(90deg, #020617, #0f172a);
+  padding: 1px 6px;
+  border-radius: 16px;
+ /* box-shadow: 0 0 16px rgba(0,0,0,0.7);*/
+}
+
+/* ================= WORKSPACES (NUMBERS ONLY + ANIMATED GLOW) ================= */
+
+#workspaces {
+  padding: 1px;
+}
+
+#workspaces button {
+  font-size: 11px;
+  font-weight: bold;
+  color: #e5e7eb;
+  background: rgba(255,255,255,0.12);
+  border-radius: 8px;
+  padding: 2px 6px;
+  margin: 1px;
+  transition: background 0.25s ease, box-shadow 0.25s ease;
+}
+
+#workspaces button:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+/* Active workspace animated glow */
+#workspaces button.active {
+  background: linear-gradient(135deg, #22d3ee, #38bdf8);
+  color: #020617;
+  animation: workspaceGlow 0.6s ease-out;
+  box-shadow:
+    0 0 8px #38bdf8,
+    0 0 16px rgba(56,189,248,0.9);
+}
+
+@keyframes workspaceGlow {
+  from { box-shadow: 0 0 0px rgba(56,189,248,0.0); }
+  to {
+    box-shadow:
+      0 0 8px #38bdf8,
+      0 0 16px rgba(56,189,248,0.9);
+  }
+}
+
+/* ================= WINDOW ================= */
+
+#window {
+  padding: 0 8px;
+  background: linear-gradient(135deg, #c084fc, #e879f9);
+  color: #020617;
+  font-weight: bold;
+  margin: 1px 2px;
+  font-size: 11px;
+}
+
+/* ================= CLOCK ================= */
+
+#clock {
+  background: linear-gradient(135deg, #fb7185, #f472b6, #c084fc);
+  color: #020617;
+  padding: 3px 12px;
+  font-size: 11px;
+  font-weight: bold;
+ /* box-shadow: 0 0 14px #c084fc;*/
+  margin: 1px 2px;
+}
+
+/* ================= CPU ================= */
+
+#cpu {
+  background: linear-gradient(135deg, #22c55e, #4ade80);
+  color: #020617;
+  padding: 3px 6px;
+  margin: 1px 2px;
+  font-weight: bold;
+
+}
+
+/* ================= MEMORY ================= */
+
+#memory {
+  background: linear-gradient(135deg, #facc15, #fde047);
+  color: #020617;
+  padding: 3px 6px;
+  margin: 1px 2px;
+  font-weight: bold;
+
+}
+
+/* ================= STORAGE ================= */
+
+#disk {
+  background: linear-gradient(135deg, #f97316, #fb923c);
+  color: #020617;
+  font-size: 11px;     /* Slightly bigger than global */
+  padding: 2px 7px;  /* Wider for long text */
+  letter-spacing: 0.3px;
+  font-weight: bold;
+
+}
+
+/* Disk warning animation */
+#disk.warning {
+  background: linear-gradient(135deg, #facc15, #fde047);
+  box-shadow: 0 0 10px #fde047;
+  animation: diskPulse 1.6s infinite alternate;
+}
+
+#disk.critical {
+  background: linear-gradient(135deg, #ef4444, #fb7185);
+  box-shadow:
+    0 0 12px #ef4444,
+    0 0 22px rgba(239,68,68,0.9);
+  animation: diskPulseCritical 1s infinite alternate;
+}
+
+/* ================= NETWORK ================= */
+
+#network {
+  background: linear-gradient(135deg, #38bdf8, #818cf8);
+  color: #020617;
+  font-weight: bold;
+  margin: 1px 2px;
+  font-size: 11px;        /* Bigger than global 10px */
+  padding: 4px 11px; /* Wider horizontally */
+  letter-spacing: 1px;/* Makes signal % breathe */
+ /* box-shadow: 0 0 12px rgba(56,189,248,0.9);*/
+}
+
+/* ================= AUDIO ================= */
+
+#pulseaudio {
+  background: linear-gradient(135deg, #c084fc, #e879f9);
+  color: #020617;
+  padding: 3px 6px;
+  margin: 1px 2px;
+  font-weight: bold;
+}
+
+#pulseaudio.muted {
+  background: linear-gradient(135deg, #64748b, #475569);
+  color: #e5e7eb;
+}
+
+/* ================= TRAY ================= */
+
+#tray {
+  background: linear-gradient(135deg, rgba(255,255,255,0.2), rgba(255,255,255,0.05));
+  padding: 3px 6px;
+  margin: 1px 2px;
+}
+
+/* ================= DISK ANIMATIONS ================= */
+
+@keyframes diskPulse {
+  from { box-shadow: 0 0 8px #fde047; }
+  to   { box-shadow: 0 0 16px #fde047; }
+}
+
+@keyframes diskPulseCritical {
+  from { box-shadow: 0 0 10px #ef4444; }
+  to   { box-shadow: 0 0 24px #ef4444; }
+}
+

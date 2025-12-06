@@ -1,0 +1,132 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 30,
+  "margin-top": 4,
+  "margin-left": 6,
+  "margin-right": 6,
+  "spacing": 4,
+
+  "modules-left": [
+    "hyprland/workspaces",
+    "hyprland/window"
+  ],
+
+  "modules-center": [
+    "clock",
+    "custom/update",
+    "custom/screenrecording-indicator"
+  ],
+
+  "modules-right": [
+    "cpu",
+    "memory",
+    "disk",
+    "network",
+    "pulseaudio",
+    "tray"
+  ],
+
+  // -------- ULTRA CLEAN WORKSPACES (NUMBERS ONLY) --------
+  "hyprland/workspaces": {
+    "format": "{id}",
+    "on-click": "activate",
+    "format-icons": {
+      "default": "",
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "10": "0",
+      "active": "󱓻",
+    "sort-by-number": true
+    },
+    "persistent-workspaces": {
+      "*": 9
+    }
+  },
+"custom/update": {
+    "format": "",
+    "exec": "omarchy-update-available",
+    "on-click": "omarchy-launch-floating-terminal-with-presentation omarchy-update",
+    "tooltip-format": "Omarchy update available",
+    "signal": 7,
+    "interval": 21600
+  },
+
+  // -------- ACTIVE WINDOW --------
+  "hyprland/window": {
+    "format": "󰣆  {}",
+    "max-length": 30
+  },
+
+  // -------- CLOCK --------
+  "clock": {
+    "format": "  {:%I:%M %p}",
+    "tooltip-format": "  {:%A, %d %B %Y}"
+  },
+
+  // -------- CPU (click → btop/htop in Alacritty) --------
+  "cpu": {
+    "interval": 2,
+    "format": "  {usage}%",
+    "on-click": "alacritty -e btop || alacritty -e htop"
+  },
+
+  // -------- MEMORY (click → btop in Alacritty) --------
+  "memory": {
+    "interval": 3,
+    "format": "  {percentage}%",
+    "on-click": "alacritty -e btop"
+  },
+
+  // -------- STORAGE + TOOLTIP + ANIMATED WARNINGS --------
+// -------- STORAGE (Used / Total shown in bar + Tooltip + Animated Warnings) --------
+"disk": {
+  "interval": 30,
+  "path": "/",
+
+  // ✅ Shows: icon + used/total + percentage
+  "format": "󰋊 {used}/{total}({percentage_used}%)",
+
+  // ✅ Detailed hover tooltip
+  "tooltip-format": "  Disk Usage\nUsed: {used} GB\nFree: {free} GB\nTotal: {total} GB",
+
+  // ✅ Animated warning levels
+  "warning": 75,
+  "critical": 90
+},
+
+  "network": {
+    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+    "format": "{icon}",
+    "format-wifi": "{icon}",
+    "format-ethernet": "󰀂",
+    "format-disconnected": "󰤮",
+    "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-disconnected": "Disconnected",
+    "interval": 3,
+    "spacing": 1,
+    "on-click": "omarchy-launch-wifi"
+  },
+  "custom/screenrecording-indicator": {
+    "on-click": "omarchy-cmd-screenrecord",
+    "exec": "$OMARCHY_PATH/default/waybar/indicators/screen-recording.sh",
+    "signal": 8,
+    "return-type": "json"
+  },
+
+  // -------- AUDIO --------
+  "pulseaudio": {
+    "format": "  {volume}%",
+    "format-muted": "  Muted",
+    "scroll-step": 5
+  }
+}
+
