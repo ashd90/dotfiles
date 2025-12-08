@@ -104,7 +104,7 @@
 "network": {
   "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
   "format": "{icon}",
-  "format-wifi": "  {signalStrength}%  {bandwidthUpBits}  {bandwidthDownBits}",
+  "format-wifi": "  {signalStrength}%",
   "format-ethernet": "󰈀  {bandwidthUpBits} {bandwidthDownBits}",
   "format-disconnected": "󰤮",
   "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
