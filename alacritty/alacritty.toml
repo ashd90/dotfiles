@@ -1,5 +1,4 @@
 general.import = [
-  "/usr/lib/node_modules/alacritty-themes/themes/One-Dark.toml"
 ]
 
 [colors]
