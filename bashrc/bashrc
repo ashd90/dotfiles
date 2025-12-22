@@ -338,8 +338,6 @@ alias sysfailed="systemctl list-units --failed"
 alias ssn="sudo shutdown now"
 alias sr="reboot"
 
-#update betterlockscreen images
-#alias bls="betterlockscreen -u /usr/share/backgrounds/arcolinux/"
 
 #give the list of all installed desktops - xsessions desktops
 alias xd="ls /usr/share/xsessions"
@@ -349,8 +347,6 @@ alias xdw="ls /usr/share/wayland-sessions"
 alias kernel="ls /usr/lib/modules"
 alias kernels="ls /usr/lib/modules"
 
-#am I on grub,systemd-boot or refind
-alias boot="sudo /usr/local/bin/arcolinux-boot"
 
 # # ex = EXtractor for all kinds of archives
 # # usage: ex <file>
@@ -394,12 +390,6 @@ alias snapli="sudo snapper list"
 alias snapcr="sudo snapper -c root create"
 alias snapch="sudo snapper -c home create"
 
-#Leftwm aliases
-#alias lti="leftwm-theme install"
-#alias ltu="leftwm-theme uninstall"
-#alias lta="leftwm-theme apply"
-#alias ltupd="leftwm-theme update"
-#alias ltupg="leftwm-theme upgrade"
 #git
 alias rmgitcache="rm -r ~/.cache/git"
 alias grh="git reset --hard"
