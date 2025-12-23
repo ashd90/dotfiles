@@ -328,7 +328,7 @@ alias big="expac -H M '%m\t%n' | sort -h | nl"
 
 #hblock (stop tracking with hblock)
 #use unhblock to stop using hblock
-alias unhblock="hblock -S none -D none"
+#alias unhblock="hblock -S none -D none"
 
 #systeminfo
 alias probe="sudo -E hw-probe -all -upload"
@@ -415,8 +415,6 @@ eval "$(starship init bash)"
 #fetch
 #hfetch
 #sfetch
-#ufetch
-#ufetch-arco
 #pfetch
 #sysinfo
 #sysinfo-retro
