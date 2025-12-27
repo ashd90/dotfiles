@@ -329,6 +329,11 @@ alias big="expac -H M '%m\t%n' | sort -h | nl"
 #hblock (stop tracking with hblock)
 #use unhblock to stop using hblock
 #alias unhblock="hblock -S none -D none"
+#
+#
+#ytdtp to play video in mpv in 1080p
+
+alias ytp='mpv --ytdl-format="bestvideo[height<=?1080]+bestaudio/best"'
 
 #systeminfo
 alias probe="sudo -E hw-probe -all -upload"
