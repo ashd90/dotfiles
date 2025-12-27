@@ -6,5 +6,3 @@ theme = catppuccin-mocha
 font-size = 14
 background-opacity = 0.95
 gtk-titlebar = false
-# custom-shader = /home/chris/bloom.glsl
-#custom-shader = /home/chris/crt.glsl
