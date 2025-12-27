@@ -334,6 +334,7 @@ alias big="expac -H M '%m\t%n' | sort -h | nl"
 #ytdtp to play video in mpv in 1080p
 
 alias ytp='mpv --ytdl-format="bestvideo[height<=?1080]+bestaudio/best"'
+alias ytpn='mpv --cache=no'
 
 #systeminfo
 alias probe="sudo -E hw-probe -all -upload"
