@@ -25,6 +25,14 @@
     "format": "  {:%I:%M %p}", 
     "tooltip-format": "  {:%A, %d %B %Y}" 
   },
+   "custom/update": {
+    "format": " ",
+    "exec": "omarchy-update-available",
+    "on-click": "omarchy-launch-floating-terminal-with-presentation omarchy-update",
+    "tooltip-format": "Omarchy update available",
+    "signal": 7,
+    "interval": 21600
+  },
 
   "cpu": { "format": " {usage}%", "on-click": "alacritty -e btop" },
   "memory": { "format": "  {percentage}%", "on-click": "alacritty -e btop" },
@@ -66,7 +74,9 @@
   "pulseaudio": { 
     "format": "{icon}  {volume}%", 
     "on-click": "omarchy-launch-or-focus-tui wiremix", 
-    "on-click-right": "pamixer -t", 
+    "on-click-right": "pamixer -t",
+    "tooltip-format": "Playing at {volume}%",
+    "scroll-step": 5,
     "format-icons": { "default": ["", "", ""] } 
   },
 
@@ -87,3 +97,4 @@
   }
 
 }
+
