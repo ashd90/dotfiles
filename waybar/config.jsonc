@@ -25,8 +25,9 @@
     "format": "  {:%I:%M %p}", 
     "tooltip-format": "  {:%A, %d %B %Y}" 
   },
-   "custom/update": {
-    "format": " ",
+  
+  "custom/update": {
+    "format": "<span font='12'></span>", // Standardizes icon size with other modules
     "exec": "omarchy-update-available",
     "on-click": "omarchy-launch-floating-terminal-with-presentation omarchy-update",
     "tooltip-format": "Omarchy update available",
@@ -97,4 +98,3 @@
   }
 
 }
-
