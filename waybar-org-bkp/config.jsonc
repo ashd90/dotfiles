@@ -23,8 +23,6 @@
     "temperature",
     "cpu",
     "memory",
-    "disk#nvme",
-    "disk#ssd",
     "network",
     "pulseaudio",
     "tray"
@@ -112,21 +110,6 @@
   "warning-threshold": 65,
   "critical-threshold": 80,
   "tooltip": true
-},
-
-  // -------- STORAGE + TOOLTIP + ANIMATED WARNINGS --------
-"disk#nvme": {
-  "path": "/",
-  "format": " NVMe {used}/{free}",
-  "tooltip": true,
-  "interval": 1
-},
-
-"disk#ssd": {
-  "path": "/mnt/129c97d4-c48c-4208-8653-b5245bc23c58",
-  "format": " SSD {used}/{free}",
-  "tooltip": true,
-  "interval": 1
 },
 
 "network": {
