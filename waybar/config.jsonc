@@ -1,0 +1,100 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 30,
+  "margin-top": 4,
+  "margin-left": 6,
+  "margin-right": 6,
+  "spacing": 4,
+
+  "modules-left": ["hyprland/workspaces", "hyprland/window"],
+  "modules-center": ["clock", "custom/update", "custom/screenrecording-indicator"],
+  "modules-right": ["mpd", "temperature", "cpu", "memory", "network", "pulseaudio", "tray"],
+
+  "hyprland/workspaces": {
+    "on-click": "activate",
+    "format": "{name}",
+    "persistent-workspaces": { "1": [], "2": [], "3": [], "4": [], "5": [], "6": [], "7": [], "8": [], "9": [] }
+  },
+
+  "hyprland/window": { 
+    "format": "󰣆  {}", 
+    "max-length": 45 
+  },
+  "clock": { 
+    "format": "  {:%I:%M %p}", 
+    "tooltip-format": "  {:%A, %d %B %Y}" 
+  },
+  
+  "custom/update": {
+    "format": "<span font='12'></span>", // Standardizes icon size with other modules
+    "exec": "omarchy-update-available",
+    "on-click": "omarchy-launch-floating-terminal-with-presentation omarchy-update",
+    "tooltip-format": "Omarchy update available",
+    "signal": 7,
+    "interval": 21600
+  },
+
+  "cpu": { "format": " {usage}%", "on-click": "alacritty -e btop" },
+  "memory": { "format": "  {percentage}%", "on-click": "alacritty -e btop" },
+  "temperature": { "format": " {temperatureC}°C" },
+
+  "network": {
+    "format": "{icon}",
+    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+    "format-wifi": "{icon} {signalStrength}%",
+    "format-disconnected": "󰤮",
+    "tooltip-format": "SSID: {essid}\nSpeed: {bandwidthDownBits} ↓ {bandwidthUpBits} ↑",
+    "on-click": "omarchy-launch-wifi"
+  },
+
+  "mpd": {
+    "format": "{stateIcon} {randomIcon}{repeatIcon} {title} - {artist} ",
+    "format-disconnected": "󰝛 Disconnected",
+    "format-stopped": "󰓛 Stopped",
+    "unknown-tag": "Unknown", 
+    "max-length": 45,
+    "interval": 2,
+    "tooltip-format": "Artist: {artist}\nTitle: {title}\nTime: {elapsedTime:%M:%S}/{totalTime:%M:%S}\n\nL-Click: Play/Pause\nM-Click: Shuffle\nR-Click: Repeat\nScroll: Skip",
+    "on-click": "mpc toggle",
+    "on-click-right": "mpc repeat",
+    "on-click-middle": "mpc random",
+    "on-scroll-up": "mpc next",
+    "on-scroll-down": "mpc prev",
+    "random-icons": { 
+       "off": "󰒝", 
+       "on": "<span color='#0033cc'>󰒝</span>" 
+    },
+    "repeat-icons": { 
+       "off": " 󰑖", 
+       "on": "<span color='#b30000'> 󰑖</span>" 
+    },
+    "state-icons": { "paused": "󰐊", "playing": "󰏤" }
+  },
+
+  "pulseaudio": { 
+    "format": "{icon}  {volume}%", 
+    "on-click": "omarchy-launch-or-focus-tui wiremix", 
+    "on-click-right": "pamixer -t",
+    "tooltip-format": "Playing at {volume}%",
+    "scroll-step": 5,
+    "format-icons": { "default": ["", "", ""] } 
+  },
+
+  "custom/screenrecording-indicator": { 
+    "on-click": "omarchy-cmd-screenrecord", 
+    "exec": "$OMARCHY_PATH/default/waybar/indicators/screen-recording.sh", 
+    "signal": 8, 
+    "return-type": "json", 
+    "format": "<span font='13' foreground='#ff3131'>󰑋</span>", 
+    "tooltip": true,
+    "tooltip-format": "Screen Recording Status\nLeft-click: Start/Stop\nSaves to: ~/Videos/Recordings",
+    "class": "recording" 
+  },
+  "tray": { 
+    "icon-size": 18,
+    "spacing": 10,
+    "show-passive-items": true
+  }
+
+}
