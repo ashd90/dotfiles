@@ -191,32 +191,6 @@ window#waybar {
 
 }
 
-/* ================= STORAGE ================= */
-
-#disk {
-  background: linear-gradient(135deg, #f97316, #fb923c);
-  color: #020617;
-  font-size: 11px;     /* Slightly bigger than global */
-  padding: 2px 7px;  /* Wider for long text */
-  letter-spacing: 0.3px;
-  font-weight: bold;
-
-}
-
-/* Disk warning animation */
-#disk.warning {
-  background: linear-gradient(135deg, #facc15, #fde047);
-  box-shadow: 0 0 10px #fde047;
-  animation: diskPulse 1.6s infinite alternate;
-}
-
-#disk.critical {
-  background: linear-gradient(135deg, #ef4444, #fb7185);
-  box-shadow:
-    0 0 12px #ef4444,
-    0 0 22px rgba(239,68,68,0.9);
-  animation: diskPulseCritical 1s infinite alternate;
-}
 
 /* ================= NETWORK ================= */
 /* ================= NETWORK (HIGH-CONTRAST AMBER → COPPER → RED) ================= */
