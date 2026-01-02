@@ -131,12 +131,6 @@ alias userlist="cut -d: -f1 /etc/passwd | sort"
 #merge new settings
 alias merge="xrdb -merge ~/.Xresources"
 
-# Aliases for software managment
-# pacman or pm
-alias pacman='sudo pacman --color auto'
-alias update='sudo pacman -Syyu'
-alias upd='sudo pacman -Syyu'
-
 # paru as aur helper - updates everything
 alias pksyua="paru -Syu --noconfirm"
 alias upall="paru -Syu --noconfirm"
