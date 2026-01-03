@@ -94,11 +94,6 @@ alias setlocales="sudo localectl set-x11-keymap be && sudo localectl set-locale 
 alias unlock="sudo rm /var/lib/pacman/db.lck"
 alias rmpacmanlock="sudo rm /var/lib/pacman/db.lck"
 
-#arcolinux logout unlock
-#alias rmlogoutlock="sudo rm /tmp/arcologout.lock"
-
-#which graphical card is working
-#alias whichvga="/usr/local/bin/arcolinux-which-vga"
 
 #free
 alias free="free -mt"
