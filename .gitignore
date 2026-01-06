@@ -1,4 +1,4 @@
 ./rtl8812au/.git
 ./.config/*.git
-./mpd/database
-./mpd/state
+mpd/database
+mpd/state
