@@ -211,10 +211,6 @@ alias rams='rate-mirrors --allow-root --disable-comments --protocol https arch  
 #mounting the folder Public for exchange between host and guest on virtualbox
 alias vbm="sudo /usr/local/bin/arcolinux-vbox-share"
 
-#enabling vmware services
-alias start-vmware="sudo systemctl enable --now vmtoolsd.service"
-alias vmware-start="sudo systemctl enable --now vmtoolsd.service"
-alias sv="sudo systemctl enable --now vmtoolsd.service"
 
 
 #youtube download
