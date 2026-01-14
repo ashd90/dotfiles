@@ -142,7 +142,7 @@
   "max-length": 45,      // Prevents the bar from jumping around
   "interval": 2,
     
-  // Commands from before
+  
   "on-click": "mpc toggle",
   "on-click-right": "mpc next",
   "on-click-middle": "mpc random",
