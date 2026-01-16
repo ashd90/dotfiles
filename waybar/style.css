@@ -1,0 +1,61 @@
+/* Global Settings */
+* { border: none; border-radius: 10px; font-family: "JetBrainsMono Nerd Font", monospace; font-size: 11px; }
+window#waybar { background: rgba(2, 6, 23, 0.7); border-radius: 16px; }
+
+#window, #mpd, #temperature, #cpu, #memory, #disk, #network, #pulseaudio, #clock, #tray, #custom-update {
+    padding: 2px 8px; margin: 2px 1px; font-weight: 800; border-radius: 10px; color: #ffffff;
+}
+
+#window { background: linear-gradient(135deg, #f97316, #fb7185); }
+#clock { background: linear-gradient(135deg, #7c3aed, #4f46e5); }  
+#cpu { background: linear-gradient(135deg, #14b8a6, #0ea5e9); }    
+#memory { background: linear-gradient(135deg, #a855f7, #ec4899); } 
+#disk { background: linear-gradient(135deg, #a3e635, #65a30d); }
+#pulseaudio { background: linear-gradient(135deg, #4ade80, #16a34a); }
+#network { background: linear-gradient(135deg, #ff7eb3, #ff758c); }
+#temperature { background: linear-gradient(135deg, #d946ef, #a21caf); }
+#custom-update { background: linear-gradient(135deg, #fbbf24, #f59e0b); color: #000000; }
+
+/* Centered Utility Modules */
+#idle_inhibitor, #custom-screenrecording-indicator {
+    margin: 2px 1px; min-width: 40px; font-size: 16px; font-weight: 800; border-radius: 10px; padding: 0;
+}
+#idle_inhibitor { background: linear-gradient(135deg, #f59e0b, #d97706); color: #000000; }
+#idle_inhibitor.activated { background: linear-gradient(135deg, #fbbf24, #f59e0b); box-shadow: 0 0 8px rgba(251, 191, 36, 0.5); }
+#custom-screenrecording-indicator { background: linear-gradient(135deg, #b91c1c, #7f1d1d); color: #ffffff; }
+#custom-screenrecording-indicator.recording { background: linear-gradient(135deg, #ef4444, #dc2626); box-shadow: 0 0 8px rgba(239, 68, 68, 0.6); }
+
+/* Workspace Styling */
+#workspaces button { margin: 2px 1px; padding: 2px 8px; font-weight: 900; border-radius: 8px; }
+#workspaces button.empty { background: rgba(255, 255, 255, 0.1); color: #ffffff; }
+#workspaces button:not(.empty) { background: linear-gradient(135deg, #facc15, #fb923c); color: #000000; }
+#workspaces button.active { background: linear-gradient(135deg, #06b6d4, #3b82f6); color: #ffffff; border: 1px solid #ffffff; }
+
+/* Workspace Underline Borders - RESTORED */
+#workspaces button:nth-child(1) { border-bottom: 3px solid #ff5555; }
+#workspaces button:nth-child(2) { border-bottom: 3px solid #ffb86c; }
+#workspaces button:nth-child(3) { border-bottom: 3px solid #f1fa8c; }
+#workspaces button:nth-child(4) { border-bottom: 3px solid #50fa7b; }
+#workspaces button:nth-child(5) { border-bottom: 3px solid #8be9fd; }
+#workspaces button:nth-child(6) { border-bottom: 3px solid #bd93f9; }
+#workspaces button:nth-child(7) { border-bottom: 3px solid #ff79c6; }
+#workspaces button:nth-child(8) { border-bottom: 3px solid #f8f8f2; }
+#workspaces button:nth-child(9) { border-bottom: 3px solid #6272a4; }
+
+/* MPD Logic */
+#mpd { background: linear-gradient(45deg, #ff8c00, #ff4500); }
+#mpd.playing { background: linear-gradient(45deg, #fde047, #f59e0b); color: #000000; }
+#mpd.paused { background: linear-gradient(45deg, #e11d48, #9f1239); }
+
+/* Tray, Tooltip, and Menu Styling */
+#tray { background: linear-gradient(135deg, #6366f1, #3b82f6); padding: 2px 6px; margin: 2px 1px; }
+tooltip, menu { background: linear-gradient(135deg, #2e1065, #4c1d95); border: 2px solid #a78bfa; border-radius: 10px; }
+tooltip label, menu menuitem { color: #ffffff; padding: 8px; font-weight: 800; font-size: 12px; }
+menu menuitem:hover { background: rgba(255, 255, 255, 0.2); }
+
+/* Hover Effects */
+#window:hover, #clock:hover, #cpu:hover, #memory:hover, #disk:hover, #pulseaudio:hover, 
+#network:hover, #tray:hover, #mpd:hover, #temperature:hover, #custom-update:hover, 
+#idle_inhibitor:hover, #custom-screenrecording-indicator:hover, #workspaces button:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
