@@ -1,0 +1,32 @@
+* {
+    bg: #2d2b55;
+    cur: #a599e9;
+    fg: #ffffff;
+    accent: #fad000;
+
+    background-color: @bg;
+    text-color: @fg;
+}
+
+window {
+    width: 30%;
+    border: 2px;
+    border-color: @accent;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+element selected {
+    background-color: @cur;
+    text-color: @bg;
+    border-radius: 4px;
+}
+
+inputbar {
+    children: [prompt, entry];
+    spacing: 10px;
+}
+
+prompt {
+    text-color: @accent;
+}
