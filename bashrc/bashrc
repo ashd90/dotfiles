@@ -19,13 +19,12 @@ PS1='[\u@\h \W]\$ '
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-
-if [ -d "$HOME/.bin" ] ;
-  then PATH="$HOME/.bin:$PATH"
+if [ -d "$HOME/.bin" ]; then
+  PATH="$HOME/.bin:$PATH"
 fi
 
-if [ -d "$HOME/.local/bin" ] ;
-  then PATH="$HOME/.local/bin:$PATH"
+if [ -d "$HOME/.local/bin" ]; then
+  PATH="$HOME/.local/bin:$PATH"
 fi
 
 #ignore upper and lowercase when TAB completion
@@ -82,12 +81,11 @@ alias gc='git commit -m'
 alias gp='git push'
 alias gpl='git pull'
 
-
 # show the list of packages that need this package - depends mpv as example
-function_depends()  {
-    search=$(echo "$1")
-    sudo pacman -Sii $search | grep "Required" | sed -e "s/Required By     : //g" | sed -e "s/  /\n/g"
-    }
+function_depends() {
+  search=$(echo "$1")
+  sudo pacman -Sii $search | grep "Required" | sed -e "s/Required By     : //g" | sed -e "s/  /\n/g"
+}
 
 alias depends='function_depends'
 
@@ -109,7 +107,6 @@ alias fgrep='fgrep --color=auto'
 #readable output
 alias df='df -h'
 
-
 #setlocale
 alias setlocale="sudo localectl set-locale LANG=en_US.UTF-8"
 alias setlocales="sudo localectl set-x11-keymap be && sudo localectl set-locale LANG=en_US.UTF-8"
@@ -117,7 +114,6 @@ alias setlocales="sudo localectl set-x11-keymap be && sudo localectl set-locale 
 #pacman unlock
 alias unlock="sudo rm /var/lib/pacman/db.lck"
 alias rmpacmanlock="sudo rm /var/lib/pacman/db.lck"
-
 
 #free
 alias free="free -mt"
@@ -165,7 +161,6 @@ alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
 alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
 alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
 
-
 # kill commands
 # quickly kill conkies
 alias kc='killall conky'
@@ -210,8 +205,6 @@ alias rams='rate-mirrors --allow-root --disable-comments --protocol https arch  
 
 #mounting the folder Public for exchange between host and guest on virtualbox
 alias vbm="sudo /usr/local/bin/arcolinux-vbox-share"
-
-
 
 #youtube download
 alias yta-aac="yt-dlp --extract-audio --audio-format aac "
@@ -303,6 +296,7 @@ alias gpg-retrieve="gpg2 --keyserver-options auto-key-retrieve --receive-keys"
 alias fix-gpg-retrieve="gpg2 --keyserver-options auto-key-retrieve --receive-keys"
 alias fix-keyserver="[ -d ~/.gnupg ] || mkdir ~/.gnupg ; cp /etc/pacman.d/gnupg/gpg.conf ~/.gnupg/ ; echo 'done'"
 
+alias btop='btop --force-utf'
 
 #maintenance
 alias big="expac -H M '%m\t%n' | sort -h | nl"
@@ -326,7 +320,6 @@ alias sysfailed="systemctl list-units --failed"
 alias ssn="sudo shutdown now"
 alias sr="reboot"
 
-
 #give the list of all installed desktops - xsessions desktops
 alias xd="ls /usr/share/xsessions"
 alias xdw="ls /usr/share/wayland-sessions"
@@ -335,28 +328,26 @@ alias xdw="ls /usr/share/wayland-sessions"
 alias kernel="ls /usr/lib/modules"
 alias kernels="ls /usr/lib/modules"
 
-
 # # ex = EXtractor for all kinds of archives
 # # usage: ex <file>
-ex ()
-{
-  if [ -f $1 ] ; then
+ex() {
+  if [ -f $1 ]; then
     case $1 in
-      *.tar.bz2)   tar xjf $1   ;;
-      *.tar.gz)    tar xzf $1   ;;
-      *.bz2)       bunzip2 $1   ;;
-      *.rar)       unrar x $1   ;;
-      *.gz)        gunzip $1    ;;
-      *.tar)       tar xf $1    ;;
-      *.tbz2)      tar xjf $1   ;;
-      *.tgz)       tar xzf $1   ;;
-      *.zip)       unzip $1     ;;
-      *.Z)         uncompress $1;;
-      *.7z)        7z x $1      ;;
-      *.deb)       ar x $1      ;;
-      *.tar.xz)    tar xf $1    ;;
-      *.tar.zst)   tar xf $1    ;;
-      *)           echo "'$1' cannot be extracted via ex()" ;;
+    *.tar.bz2) tar xjf $1 ;;
+    *.tar.gz) tar xzf $1 ;;
+    *.bz2) bunzip2 $1 ;;
+    *.rar) unrar x $1 ;;
+    *.gz) gunzip $1 ;;
+    *.tar) tar xf $1 ;;
+    *.tbz2) tar xjf $1 ;;
+    *.tgz) tar xzf $1 ;;
+    *.zip) unzip $1 ;;
+    *.Z) uncompress $1 ;;
+    *.7z) 7z x $1 ;;
+    *.deb) ar x $1 ;;
+    *.tar.xz) tar xf $1 ;;
+    *.tar.zst) tar xf $1 ;;
+    *) echo "'$1' cannot be extracted via ex()" ;;
     esac
   else
     echo "'$1' is not a valid file"
@@ -384,7 +375,6 @@ alias grh="git reset --hard"
 
 #pamac
 alias pamac-unlock="sudo rm /var/tmp/pamac/dbs/db.lock"
-
 
 #create a file called .bashrc-personal and put all your personal aliases
 #in there. They will not be overwritten by skel.
@@ -415,6 +405,5 @@ alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 eval eval -- "$(/usr/local/bin/starship init bash --print-full-init)"
 
-
- # <<< conda initialize <<<
+# <<< conda initialize <<<
 # export PATH="/home/$USER/anaconda3/bin:$PATH"
