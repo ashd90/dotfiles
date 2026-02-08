@@ -369,6 +369,7 @@ alias snapli="sudo snapper list"
 alias snapcr="sudo snapper -c root create"
 alias snapch="sudo snapper -c home create"
 
+alias shnow="shutdown -h now"
 #git
 alias rmgitcache="rm -r ~/.cache/git"
 alias grh="git reset --hard"
