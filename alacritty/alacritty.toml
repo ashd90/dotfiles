@@ -29,7 +29,7 @@ draw_bold_text_with_bright_colors = true
   yellow = "#da8548"
 
   [colors.primary]
-  background = "#282c34"
+  background = "#2d2b55"
   foreground = "#bbc2cf"
 
   [colors.selection]
