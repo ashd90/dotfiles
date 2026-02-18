@@ -29,8 +29,8 @@ eval "$(starship init bash)"
 # Add to the bottom of ~/.bashrc
 export PATH=$PATH:$(go env GOPATH)/bin
 export PATH=$PATH:$HOME/.local/bin
-export DOCKER_HOST=unix:///run/user/$UID/podman/podman.sock
-export DOCKER_HOST=unix:///run/user/$UID/podman/podman.sock
+#export DOCKER_HOST=unix:///run/user/$UID/podman/podman.sock
+#export DOCKER_HOST=unix:///run/user/$UID/podman/podman.sock
 
 alias checkstack='echo "--- STATUS ---"; docker ps; echo "--- K8S ---"; kubectl get nodes; echo "--- TOOLS ---"; terraform -version; ansible --version'
 . "$HOME/.cargo/env"
