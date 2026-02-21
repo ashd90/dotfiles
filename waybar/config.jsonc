@@ -60,10 +60,14 @@
   "memory": { "format": "  {percentage}%", "on-click": "alacritty -e btop", "tooltip-format": "Memory: {used}GB / {total}GB" },
   "temperature": { "format": " {temperatureC}°C" },
 
-  "network": {
-    "format": "{icon} {signalStrength}%",
+"network": {
+    "format-wifi": "{icon} {signalStrength}%",
+    "format-ethernet": "󰀂 Eth", // Icon for wired connection
+    "format-disconnected": "󰤮 None",
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
     "tooltip-format": "SSID: {essid}\nSpeed: {bandwidthDownBits} ↓ {bandwidthUpBits} ↑",
+    "tooltip-format-ethernet": "IP: {ipaddr}\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "interval": 3,
     "on-click": "omarchy-launch-wifi"
   },
 
