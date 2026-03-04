@@ -49,3 +49,12 @@ venv-up() {
 alias venv-clean='rm -rf .venv && echo "🗑️ Venv removed."'
 alias update='sudo pacman -Syu --noconfirm && yay -Syu --noconfirm'
 alias install='sudo pacman -S --noconfirm'
+
+# Safe Shutdown for MSI ACPI Bug
+safeoff() {
+  echo "Syncing filesystems..."
+  sync
+  sleep 1
+  echo "Initiating Reboot for clean power-off state..."
+  sudo systemctl reboot
+}
