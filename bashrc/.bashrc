@@ -48,3 +48,4 @@ venv-up() {
 # Alias to clean up environments
 alias venv-clean='rm -rf .venv && echo "🗑️ Venv removed."'
 alias update='sudo pacman -Syu --noconfirm && yay -Syu --noconfirm'
+alias install='sudo pacman -S --noconfirm'
