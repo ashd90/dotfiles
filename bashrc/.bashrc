@@ -49,3 +49,30 @@ venv-up() {
 alias venv-clean='rm -rf .venv && echo "🗑️ Venv removed."'
 alias update='sudo pacman -Syu --noconfirm && yay -Syu --noconfirm'
 alias install='sudo pacman -S --noconfirm'
+alias n='nvim'
+# Quick SSD health summary
+alias ssdhealth='sudo smartctl -A /dev/nvme0n1 | grep -E "Percentage Used|Data Integrity Errors|Critical Warning|Unsafe Shutdowns"'
+
+# Emergency Sync and Reboot Function
+safeoff() {
+  echo "--- Initiating Safe Reboot Protocol ---"
+
+  # 1. Standard Sync
+  echo "Step 1: Flushing filesystem buffers..."
+  sync
+
+  # 2. Kernel Emergency Sync
+  echo "Step 2: Sending SysRq Sync to Kernel..."
+  sudo sh -c 'echo 1 > /proc/sys/kernel/sysrq'
+  sudo sh -c 'echo s > /proc/sysrq-trigger'
+  sleep 2
+
+  # 3. Remount Read-Only (Crucial for BTRFS safety)
+  echo "Step 3: Remounting all partitions as Read-Only..."
+  sudo sh -c 'echo u > /proc/sysrq-trigger'
+  sleep 1
+
+  # 4. Immediate Force Reboot
+  echo "Step 4: Forcing hardware reset..."
+  sudo reboot -f
+}
