@@ -55,6 +55,26 @@ alias failinfo='journalctl -b -1 -n 1000 | grep -iE "shutdown|reboot|power|syste
 # Quick SSD health summary
 alias ssdhealth='sudo smartctl -A /dev/nvme0n1 | grep -E "Percentage Used|Data Integrity Errors|Critical Warning|Unsafe Shutdowns"'
 
+#Sytem Services
+alias enable='sudo systemctl enable --now'
+alias disable='sudo systemctl disable'
+alias start='sudo systemctl start'
+alias stop='sudo systemctl stop'
+alias status='sudo systemctl status'
+alias reload='sudo systemctl restart'
+
+#Docker
+
+alias drm='docker rm'
+alias drmi='docker rmi'
+alias dcr='docker container run'
+alias dr='docker run'
+alias dsp='docker system prune'
+alias db='docker build'
+alias ds='docker container start'
+alias dst='docker container stop'
+alias dn='docker network'
+
 # Emergency Sync and Reboot Function
 safeoff() {
   echo "--- Initiating Safe Reboot Protocol ---"
