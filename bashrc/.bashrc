@@ -51,6 +51,7 @@ alias update='sudo pacman -Syu --noconfirm && yay -Syu --noconfirm'
 alias install='sudo pacman -S --noconfirm'
 alias yayins='yay -S --noconfirm'
 alias n='nvim'
+alias failinfo='journalctl -b -1 -n 1000 | grep -iE "shutdown|reboot|power|systemd-shutdown"'
 # Quick SSD health summary
 alias ssdhealth='sudo smartctl -A /dev/nvme0n1 | grep -E "Percentage Used|Data Integrity Errors|Critical Warning|Unsafe Shutdowns"'
 
