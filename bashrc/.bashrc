@@ -49,6 +49,7 @@ venv-up() {
 alias venv-clean='rm -rf .venv && echo "🗑️ Venv removed."'
 alias update='sudo pacman -Syu --noconfirm && yay -Syu --noconfirm'
 alias install='sudo pacman -S --noconfirm'
+alias yayins='yay -S --noconfirm'
 alias n='nvim'
 # Quick SSD health summary
 alias ssdhealth='sudo smartctl -A /dev/nvme0n1 | grep -E "Percentage Used|Data Integrity Errors|Critical Warning|Unsafe Shutdowns"'
