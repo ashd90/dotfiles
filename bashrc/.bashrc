@@ -34,8 +34,9 @@ alias checkstack='echo "--- STATUS ---"; docker ps; echo "--- K8S ---"; kubectl 
 . "$HOME/.cargo/env"
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+export LANG=en_US.UTF-8
 
-# DevOps Python Venv Automator
+# Python Venv Automator
 venv-up() {
   if [ ! -d ".venv" ]; then
     echo "🚀 Creating new virtual environment with uv..."
