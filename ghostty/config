@@ -33,8 +33,8 @@ window-padding-x = 9
 window-padding-y = 9
 
 # --- Window Size ---
-window-width = 100
-window-height = 30
+window-width = 105
+window-height = 32
 
 # This makes it look great on KDE:
 window-decoration = true
