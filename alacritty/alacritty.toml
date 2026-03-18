@@ -163,5 +163,5 @@ title = "Alacritty"
   y = 6
 
   [window.dimensions]
-  columns = 109
+  columns = 105
   lines = 32
