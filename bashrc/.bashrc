@@ -63,7 +63,8 @@ alias disable='sudo systemctl disable'
 alias start='sudo systemctl start'
 alias stop='sudo systemctl stop'
 alias status='sudo systemctl status'
-alias reload='sudo systemctl restart'
+alias reload='sudo systemctl daemon-reload'
+alias restart='sudo systemctl restart'
 
 #Docker
 
