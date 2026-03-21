@@ -128,9 +128,7 @@ alias userlist="cut -d: -f1 /etc/passwd | sort"
 #alias merge="xrdb -merge ~/.Xresources"
 
 # paru as aur helper - updates everything
-alias pksyua="paru -Syu --noconfirm"
 alias upall="paru -Syu --noconfirm"
-alias upa="paru -Syu --noconfirm"
 
 #ps
 alias psa="ps auxf"
