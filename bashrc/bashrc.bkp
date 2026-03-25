@@ -228,7 +228,7 @@ alias listaur="sudo pacman -Qqem"
 # add > list at the end to write to a file
 
 # install packages from list
-# pacman -S --needed - < my-list-of-packages.txt
+#pacman -S --needed - < packages.txt
 
 #clear
 alias clean="clear; seq 1 $(tput cols) | sort -R | sparklines | lolcat"
@@ -399,7 +399,6 @@ eval "$(starship init bash)"
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
-eval eval -- "$(/usr/local/bin/starship init bash --print-full-init)"
 
 # <<< conda initialize <<<
 # export PATH="/home/$USER/anaconda3/bin:$PATH"
