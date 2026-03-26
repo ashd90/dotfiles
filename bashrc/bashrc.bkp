@@ -379,7 +379,6 @@ alias pamac-unlock="sudo rm /var/tmp/pamac/dbs/db.lock"
 eval "$(starship init bash)"
 # reporting tools - install when not installed
 #fastfetch | lolcat
-#neofetch
 #screenfetch
 #alsi
 #paleofetch
