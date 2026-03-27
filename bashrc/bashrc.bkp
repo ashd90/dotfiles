@@ -387,7 +387,6 @@ eval "$(starship init bash)"
 #sfetch
 #pfetch
 #sysinfo
-#sysinfo-retro
 #cpufetch
 #colorscript random
 #hyfetch
