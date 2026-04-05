@@ -87,11 +87,7 @@ function_depends() {
   sudo pacman -Sii $search | grep "Required" | sed -e "s/Required By     : //g" | sed -e "s/  /\n/g"
 }
 
-alias depends='function_depends'
-
-#fix obvious typo's
-alias cd..='cd ..'
-alias pdw='pwd'
+alias depends='function_depends
 alias udpate='sudo pacman -Syyu'
 alias upall='paru -Syu --noconfirm'
 
