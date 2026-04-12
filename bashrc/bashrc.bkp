@@ -217,10 +217,6 @@ alias list="sudo pacman -Qqe"
 alias listt="sudo pacman -Qqet"
 # list of AUR packages
 alias listaur="sudo pacman -Qqem"
-# add > list at the end to write to a file
-
-# install packages from list
-#pacman -S --needed - < packages.txt
 
 #clear
 alias clean="clear; seq 1 $(tput cols) | sort -R | sparklines | lolcat"
