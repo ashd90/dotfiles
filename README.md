@@ -35,11 +35,6 @@ git clone https://github.com/ashd90/dotfiles.git ~/dotfiles
 
 🔗 Symlink configuration files to your home directory:
 
-```bash
-cd ~/dotfiles
-./install.sh
-```
-
 > **Note:** ⚠️ The `install.sh` script will create symbolic links for relevant configs. Review the script before running to ensure safety!
 
 ## Structure
@@ -83,5 +78,3 @@ Feel free to fork and adapt these dotfiles. If you want to use them as your own:
 🤝 Pull requests are welcome! If you find improvements or new configurations, feel free to open an issue or PR.
 
 ---
-
-
