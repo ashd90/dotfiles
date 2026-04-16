@@ -33,10 +33,6 @@ This repository is tailored for my workflow, but feel free to explore and adapt 
 git clone https://github.com/ashd90/dotfiles.git ~/dotfiles
 ```
 
-🔗 Symlink configuration files to your home directory:
-
-> **Note:** ⚠️ The `install.sh` script will create symbolic links for relevant configs. Review the script before running to ensure safety!
-
 ## Structure
 
 Typical directory organization:
