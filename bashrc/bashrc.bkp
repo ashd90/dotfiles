@@ -154,10 +154,6 @@ alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
 # kill commands
 # quickly kill conkies
 alias kc='killall conky'
-# quickly kill polybar
-alias kp='killall polybar'
-# quickly kill picom
-alias kpi='killall picom'
 
 #hardware info --short
 alias hw="hwinfo --short"
