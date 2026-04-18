@@ -116,9 +116,6 @@ alias wget="wget -c"
 #userlist
 alias userlist="cut -d: -f1 /etc/passwd | sort"
 
-#merge new settings
-#alias merge="xrdb -merge ~/.Xresources"
-
 # paru as aur helper - updates everything
 alias upall="paru -Syu --noconfirm"
 
