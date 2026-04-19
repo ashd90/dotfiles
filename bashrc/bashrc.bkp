@@ -87,8 +87,8 @@ function_depends() {
   sudo pacman -Sii $search | grep "Required" | sed -e "s/Required By     : //g" | sed -e "s/  /\n/g"
 }
 
-alias depends='function_depends
-alias udpate='sudo pacman -Syyu'
+alias depends='function_depends'
+alias udpate='sudo pacman -Syu'
 alias upall='paru -Syu --noconfirm'
 
 ## Colorize the grep command output for ease of use (good for log files)##
