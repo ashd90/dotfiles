@@ -129,7 +129,7 @@ alias setlocales="sudo localectl set-x11-keymap be && sudo localectl set-locale 
 alias free="free -mt"
 
 #continue download
-alias wget="wget -c"
+#alias wget="wget -c"
 
 #userlist
 alias userlist="cut -d: -f1 /etc/passwd | sort"
