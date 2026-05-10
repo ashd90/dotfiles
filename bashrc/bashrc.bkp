@@ -264,8 +264,8 @@ alias nenvironment="sudo $EDITOR /etc/environment"
 
 #reading logs with bat
 alias lpacman="bat /var/log/pacman.log"
-alias lxorg="bat /var/log/Xorg.0.log"
-alias lxorgo="bat /var/log/Xorg.0.log.old"
+#alias lxorg="bat /var/log/Xorg.0.log"
+#alias lxorgo="bat /var/log/Xorg.0.log.old"
 
 
 #gpg
